@@ -1,0 +1,49 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    float P,C;
+    cout<<"escriba el peso en gramos de la carta enviada: ";
+    cin>> P;
+    if ((0<P)&&(P<=50)) {
+        C=1.50;
+        cout<<"el costo de envio de esta carta es: "<<C;
+    }
+    else {
+        if ((50<P)&&(P<=100)) {
+            C=4.50;
+            cout<<"el costo de envio de esta carta es: "<<C;
+        }
+        else {
+            if ((100<P)&&(P<=200)) {
+                C=6.00;
+                cout<<"el costo de envio de esta carta es: "<<C;
+            }
+            else {
+                if ((200<P)&&(P<=350)) {
+                    C=10.50;
+                    cout<<"el costo de envio de esta carta es: "<<C;
+                }
+                else {
+                    if ((350<P)&&(P<=500)) {
+                        C=15.00;
+                        cout<<"el costo de envio de esta carta es: "<<C;
+                    }
+                    else {
+                        if (P>500) {
+                            cout<<"el mensaje no se puede enviar";
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    
+
+    return 0;
+}
