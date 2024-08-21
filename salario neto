@@ -1,0 +1,23 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    float Nombre,Horas,Precio,Salario;
+    cout<<"Ingresar el nombre; ";
+    cin>>Nombre;
+    cout<<"Ingresar horas; ";
+    cin>>Horas;
+    cout<<"Ingresar precio x horas; ";
+    cin>>Precio;
+    Salario=Horas*Precio;
+    if (Salario> 8272) {
+        Salario=Salario*0.87;
+    }
+    cout<< "el salario neto es: "<<Salario;
+
+    return 0;
+}
