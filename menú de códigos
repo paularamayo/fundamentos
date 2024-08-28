@@ -1,0 +1,80 @@
+#include <iostream>
+#include <string>
+#include "math.h"
+using namespace std;
+  int main(){
+  float p1,p2,p3,f,pf,p;
+  int opcion;
+  float capital, interes, tasa, tiempo;
+   float I,C,N,T; 
+  do{
+    cout<<"MENU"<<endl  ;
+    cout<<"1.nota fianl"<<endl;
+    cout<<"2.interes simple"<<endl;
+    cout<<"3.tasa de interes"<<endl;
+    cout<<"0.salir"<<endl;
+    cout<<"ingrese una opcion: "<<endl;
+    cin>>opcion;
+    
+    switch (opcion) {
+        case 1:
+        {
+         cout<<"ingrese la nota del primer parcial: ";
+         cin>>p1;
+         cout<<"ingrese la nota del segundo parcial: ";
+         cin>>p2;
+         cout<<"ingrese la nota del tercer parcial: ";
+         cin>>p3;
+         cout<<"ingrese la nota del examen final: ";
+         cin>>f;
+         cout<<"ingrese la nota del proyecto final: ";
+         cin>>pf;
+         p=(((p1+p2+p3)/3)*0.4)+(f*0.4)+(pf*0.2);
+         cout<<"Su promedio final es: "<<p;
+         return 0;
+       }
+        case 2:
+        {
+         cout << "Ingrese la cantidad de capital: ";
+         cin >> capital;
+    
+         cout << "Ingrese el porcentaje de tasa de interes: ";
+         cin >> tasa;
+    
+         cout << "Ingrese la cantidad de tiempo (en años): ";
+         cin >> tiempo;
+    
+         interes = capital * (tasa / 100) * tiempo;
+    
+         cout << "Con un capital de " << capital << ", una tasa de interes de " << tasa 
+         << "% y un tiempo de " << tiempo << " años, ganará " << interes << " de interés." << endl;
+    
+         return 0;
+
+        }
+        case 3:
+        {
+        cout<<"Ingresar la capital incial ";
+        cin>>C;
+        cout<<"Ingresar los años ";
+        cin>>N;
+        cout<<"Ingresar la tasa de interes ";
+        cin>>T;
+        I=C*(pow(1+T,N)-1); 
+        cout<<"Su interes compuesto es: " <<I;
+        return 0;
+
+        }
+        case 0:
+        {
+            cout<<"salir";
+            break;
+        }
+        default:
+        cout<<"esta opcion no esta habilitada";
+    }
+  }while(opcion!=0);
+  
+
+    return 0;
+}
