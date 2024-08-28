@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main(){
+   int contador=1,acumulador=0,n;
+   do {
+    cout<<"ingrese el numero total de veces que quiere sumar: " ;
+   cin>> n;   
+   }while ((0>=n)||(n>50));
+   while (contador <=n){
+       acumulador = acumulador + contador;
+       contador = contador + 1 ;
+   }
+   cout<<"la suma de los numeros ingresados es: "<<acumulador;
+
+    return 0;
+}
