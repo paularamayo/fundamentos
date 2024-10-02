@@ -1,0 +1,30 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+    int n, fib0 = 1, fib1 = 1, fibN, i = 2;
+    do {
+        cout << "Secuencia de Fibonacci" << endl;
+        cout << "ingresa el valor: ";
+        cin >> n;
+        if (n < 0)
+            cout << "escribe un valor natural." << endl;
+    } while (n < 0);
+    if (n == 0) {
+        cout << "El 0-ésimo número de Fibonacci es: 1" << endl;
+    }
+    else
+    {
+        if (n == 1) {
+            cout << "El 1-ésimo número de Fibonacci es: 1" << endl;
+        }
+        else {
+            for (i; i <= n; i++) {
+                fibN = fib0 + fib1;
+                fib0 = fib1;
+                fib1 = fibN;
+            }
+            cout << "El " << n << "-ésimo número de Fibonacci es: " << fibN << endl;
+        }
+    }
+}
